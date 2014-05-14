@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html data-ng-app="">
+	<head>
+		<meta charset="UTF-8">
+		<link href="css/history.css" rel="stylesheet">
+		<script type="text/javascript" src="js/angular.js"></script>
+		<script type="text/javascript" src="js/angular-route.js"></script>
+		<script type="text/javascript" src="js/historyController.js"></script>
+	</head>
+<body> 
+	<div id="holder" data-ng-controller="historyController">
+	<div id="heading"><h1 class="mainTitle">The Historical Site Exchange</h1></div>
+<div class="form-holder">
+<h4 class="form-heading">Enter Your Historical Site to Match the List</h4><br />
+<div class="insert-holder">
+		<div class="inserts">Name: <input type="text" data-ng-model="newSite.name" style="width:80%;" /></div>
+		<div class="inserts">Era: <input type="text" data-ng-model="newSite.era" style="width:80%;" /></div>
+		<div class="inserts">Access: <input type="text" data-ng-model="newSite.access" style="width:80%;" /></div>
+		<div class="inserts"><button data-ng-click="addSite()">Add Site</button></div>
+	</div>
+	
+	<div class="list">
+		<ul>
+	<li data-ng-repeat="nextSite in listOfSites">
+
+		<span class="list-text">Name: {{nextSite.name}}</span>  <span class="list-text">Era: {{ nextSite.era}}</span>   <span class="list-text">Access: {{nextSite.access}}</span>
+		<a href="#" ng-click="delete($index)"><img src="icons/del_btn.png" name="Remove" alt="Remove" width="20px"></a>
+	</li>
+</ul>
+</div>
+</div>
+	
+
+
+	<!-- a place to load our partials 
+	<div id="container">
+		<div ng-view></div>
+	</div>-->
+</div>
+	</body>
+</html>

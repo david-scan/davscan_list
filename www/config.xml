@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.phonegap.historicalsiteexchange" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Historical Site Exchange</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="david.scanlon@webelevate.ie" href="http://phonegap.com">
+        Apache Cordova Team
+    </author>
+
+    <preference name="permissions" value="none"/>
+
+    <icon src="icons/icon.png"/>
+    <content src="index.html" />
+    <access origin="*" />
+</widget>
